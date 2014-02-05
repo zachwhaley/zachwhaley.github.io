@@ -1,32 +1,15 @@
 <!doctype html>
 <html>
 <head>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  <title>Zach</title>
-  <style type='text/css'>
-  body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    width: 640px;
-    margin: auto;
-  }
-  h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    border-bottom: 1px solid darkred;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  a:hover {
-    color: darkred;
-    text-decoration: none;
-  }
-  td {
-    padding-right: 86px;
-  }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{ page.title }}</title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- syntax highlighting CSS -->
+  <link rel="stylesheet" href="/css/syntax.css">
 </head>
 <body>
   <h1>Zach Whaley's</h1>
@@ -48,5 +31,7 @@
         <a href='https://plus.google.com/photos/+ZachWhaley/albums/5975996956793971169'>Greyhounds</a>
     </td>
   </table>
+  <p>
+  {{ content }}
 </body>
 </html>

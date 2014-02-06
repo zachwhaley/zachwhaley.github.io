@@ -5,7 +5,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  width: 640px;
+  width: 45em;
   margin: auto;
 }
 h1, h2 {
@@ -29,11 +29,29 @@ a:hover {
 
 /* Menu */
 
-.menu td {
-  padding-right: 86px;
+// I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items
+.menu {
+  height: auto;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+
+.item {
+  width: auto;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
 }
 
 /* Content */
+
 .content {
   margin-top: 2em;
 }

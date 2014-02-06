@@ -29,7 +29,7 @@ a:hover {
 
 /* Menu */
 
-// I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items
+/* I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items */
 .menu {
   height: auto;
   text-align: justify;

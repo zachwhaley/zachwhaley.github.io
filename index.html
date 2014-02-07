@@ -1,52 +1,34 @@
-<!doctype html>
-<html>
-<head>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-  <title>Zach</title>
-  <style type='text/css'>
-  body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    width: 640px;
-    margin: auto;
-  }
-  h1 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    border-bottom: 1px solid darkred;
-  }
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  a:hover {
-    color: darkred;
-    text-decoration: none;
-  }
-  td {
-    padding-right: 85px;
-  }
-  </style>
-</head>
-<body>
-  <h1>Zach Whaley's</h1>
-  <p>
-  <table>
-    <td title='GitHub'>
-        <a href='https://github.com/zachwhaley'>Code</a>
-    </td>
-    <td title='Twitter'>
-        <a href='https://twitter.com/zachwhaley'>Tweets</a>
-    </td>
-    <td title='Google+'>
-        <a href='https://plus.google.com/+ZachWhaley'>+Posts</a>
-    </td>
-    <td title='LinkedIn'>
-        <a href='http://www.linkedin.com/in/zachwhaley'>Resume</a>
-    </td>
-    <td title='Greyhounds...'>
-        <a href='https://plus.google.com/photos/+ZachWhaley/albums/5975996956793971169'>Greyhounds</a>
-    </td>
-  </table>
-</body>
-</html>
+---
+layout: default
+title: Zach Whaley's
+---
+
+<div class='menu'>
+  <div class='item' title='GitHub'>
+      <a href='https://github.com/zachwhaley'>Code</a>
+  </div>
+  <div class='item' title='Twitter'>
+      <a href='https://twitter.com/zachwhaley'>Tweets</a>
+  </div>
+  <div class='item' title='Google+'>
+      <a href='https://plus.google.com/+ZachWhaley'>+Posts</a>
+  </div>
+  <div class='item' title='LinkedIn'>
+      <a href='http://www.divnkedin.com/in/zachwhaley'>Resume</a>
+  </div>
+  <div class='item' title='Greyhounds...'>
+      <a href='https://plus.google.com/photos/+ZachWhaley/albums/5975996956793971169'>Greyhounds</a>
+  </div>
+  <span class='stretch'></span>
+</div>
+
+<div class='content'>
+  {% assign post = site.posts.first %}
+  <h2>
+    <a href='{{ post.url }}'>{{ post.title }}</a>
+  </h2>
+
+  <div class='post'>
+    {{ post.content }}
+  </div>
+</div>

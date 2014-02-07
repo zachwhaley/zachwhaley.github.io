@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+/* Common */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  width: 45em;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkred;
+  text-decoration: none;
+}
+
+/* header */
+
+.header h1 {
+  border-bottom: 1px solid darkred;
+}
+
+/* Menu */
+
+/* I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items */
+.menu {
+  height: auto;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+
+.item {
+  width: auto;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* Content */
+
+.content {
+  margin-top: 2em;
+}
+
+/* Post */
+
+.post a {
+  color: darkred;
+}
+
+.post a:hover {
+  text-decoration: underline;
+}

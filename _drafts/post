@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mv $1 ../_posts/$(date +%Y-%m-%d)-$1

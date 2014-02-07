@@ -1,4 +1,4 @@
-zachwhaley.github.io
+[zachwhaley.me](http://zachwhaley.me)
 ====================
 
-My Online Poster
+Zach Whaley's website.

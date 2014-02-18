@@ -1,0 +1,11 @@
+---
+layout: post
+title: C++11
+---
+
+I read Stroustrup's [FAQ post](http://www.stroustrup.com/C++11FAQ.html) for C++11.
+
+
+
+Something to do with schools teaching C++11 over older versions. But are companies going to adopt the language soon
+enough. I work for Cisco Systems and we are still on g++4.0 (or something like that).

@@ -30,6 +30,10 @@ a:hover {
   border-bottom: 1px solid darkred;
 }
 
+.header a:hover {
+  color: black;
+}
+
 /* Menu */
 
 /* I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items */

@@ -34,6 +34,18 @@ a:hover {
   color: black;
 }
 
+/* footer */
+
+.footer {
+  margin-top: 5em;
+  text-align: center;
+}
+
+.footer a {
+  color: grey;
+  text-decoration: none;
+}
+
 /* Menu */
 
 /* I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items */

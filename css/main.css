@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 
 /* Common */
 
@@ -83,6 +84,12 @@ a:hover {
 
 .post a:hover {
   text-decoration: underline;
+}
+
+/* Code */
+
+code {
+  font-family: 'Inconsolata', sans-serif;
 }
 
 /* Keyboard */

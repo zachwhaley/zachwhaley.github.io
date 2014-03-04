@@ -90,6 +90,17 @@ a:hover {
 
 code {
   font-family: 'Inconsolata', sans-serif;
+  font-size: 13px;
+}
+
+/* This comes from github.com */
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
 }
 
 /* Keyboard */

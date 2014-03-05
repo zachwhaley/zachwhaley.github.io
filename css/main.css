@@ -90,11 +90,11 @@ a:hover {
 
 code {
   font-family: 'Inconsolata', sans-serif;
-  font-size: 13px;
 }
 
 /* This comes from github.com */
 pre {
+  font-size: 14px;
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   line-height: 19px;

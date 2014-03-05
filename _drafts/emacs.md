@@ -3,46 +3,43 @@ layout: post
 title: Emacs
 ---
 
-I've been using Vim for the past year and I've finally configured everything to my liking, so naturally I'm switching to Emacs.
+I've been using Vim for the past year, because, and I've finally configured everything to my liking, so naturally I'm switching to Emacs.  This is how I did it.
 
-A friend at work is a long time Emacs user and has been preaching to me the wonders of coding, compiling, and debugging your code all in one program (You know, like a real IDE).  So here I go.
+## First, Get Emacs
 
-## First, Get Emacs 24
 ```bash
-sudo yum install emacs-24
+# Redhat / Fedora
+sudo yum install emacs
+
+# Debian / Ubuntu
+sudo apt-get install emacs
 ```
 
-## Second, download [Prelude](http://batsov.com/prelude/)
-Prelude is the move-in-ready version of Emacs.  It comes with tons of stuff you'd want in a coding environment, and makes learning Emacs by using it much easier.
+## Second, [Prelude](http://batsov.com/prelude/)
 
-## Third, M-x
-<kbd>M-x</kbd> means press <kbd>Alt</kbd>+<kbd>x</kbd> at the same time.
+Prelude is the move-in-ready extension of Emacs.  It comes with tons of stuff you'd want in a coding environment, and makes learning Emacs much easier.
 
-If there is anything you want to do in Emacs, like delete a character, but don't know the key mapping, press <kbd>M-x</kbd>.
+It also uses [guru mode](https://github.com/bbatsov/guru-mode), which disables arrow keys, <kbd>home</kbd>, <kbd>end</kbd>, etc to encourage you to use the established Emacs key commands.
 
-<kbd>M-x</kbd> lets you find and run any Emacs command and then tells you the key combo.
+## Third, C-g and M-x
 
-## Fourth, C-g
-<kbd>C-g</kbd> is <kbd>Ctrl</kbd>+<kbd>g</kbd>.  <kbd>C-g</kbd> is Emacs' cancel.
+<kbd>C-g</kbd> is <kbd>Ctrl</kbd>+<kbd>g</kbd>.
 
-So if you're stuck in some fourth dimension of Emacs with no way out, start spamming <kbd>C-g</kbd> and you'll eventually return to normality.
+<kbd>C-g</kbd> is Emacs' cancel, so if you're stuck in some fourth dimension of Emacs with no way out, start spamming <kbd>C-g</kbd> and you'll eventually return to normality.
 
-## Finally, don't close Emacs
+<kbd>M-x</kbd> is <kbd>Alt</kbd>+<kbd>x</kbd>.
 
-Emacs does take a long time to load, but luckily once you've opened it you don't really need to close it.  Emacs wraps just about everything from the compiler to your own shell (<kbd>C-x m</kbd>), and when used well can be your all-in-one programming tool.
+If there is anything you want to do in Emacs, like delete a character, but don't know the key mapping, press <kbd>M-x</kbd>, then start typing that something.  Suggestions for Emacs commands will appear as you type and can be executed by pressing Enter.  After the command executes Emacs will tell you what the key combo for that command is.
 
-## Oh yeah, Vim
+## Fourth, [Evil](https://gitorious.org/evil/pages/Home)
 
-As I said before I've been using Vim for about a year and I've come to appreciate the home row navigation, and honestly I think it's better than the Emacs navigation.  But if you're learning Emacs without a Vim bias, try to use Emacs as is.
+As I said before I've been using Vim for about a year and I've come to appreciate the home row navigation, so I installed Evil.  Evil lets you move around Emacs like Vim;  <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> works like Vim, <kbd>/</kbd> works like Vim, <kbd>Esc</kbd> works mostly like Vim, etc.
 
-Otherwise, make sure to get [evil](https://gitorious.org/evil/pages/Home).  Evil makes Emacs feel like Vim;  <kbd>h</kbd><kbd>j</kbd><kbd>k</kbd><kbd>l</kbd> works like Vim, <kbd>:</kbd> works like Vim, <kbd>Esc</kbd> works mostly like Vim, etc...
+If you're learning Emacs without a Vim bias, I strongly suggest trying to use Emacs as is.  Evil is not perfect and will not work in all file types (Modes).
 
-To install Evil: `M-x package-install RET evil RET`
+## Emacs
 
-If you didn't catch that:
+My Emacs friend sent me this fun [blog post](http://blog.vivekhaldar.com/post/3996068979/the-levels-of-emacs-proficiency) describing the levels of Emacs proficiency.  I'd say I'm at level 2.
 
-1. Press <kbd>M-x</kbd>
-2. Type *package-install* and hit enter
-3. Type *evil* and hit enter
 
 [done](http://xkcd.com/378/)

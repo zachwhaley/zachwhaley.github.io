@@ -9,7 +9,7 @@ Some whiteboard code:
 
 ```
 class Bean {
-    bool cool = false;
+    bool cool;
     isCool() return cool;
     beCool(bool) set cool;
 }
@@ -25,7 +25,11 @@ Curly braces are too hard to draw so forget those, semi-colons are intermittent 
 
 ## Whiteboard code to real code
 
+Below is the code required to create this program in different languages, including the shell commands to actually run each program.
+
 ### C++
+
+coolbeans.cc
 
 ```cpp
 #include <iostream>
@@ -36,10 +40,11 @@ using namespace std;
 class Bean
 {
 private:
-    bool m_cool = false;
+    bool m_cool;
 
 public:
-    Bean()
+    Bean(bool cool) :
+        m_cool(cool)
     {
     }
     virtual ~Bean()
@@ -71,20 +76,30 @@ void we_cool(vector<Bean> &beans)
 
 int main(int argc, char *argv[])
 {
-    vector<Bean> beans = {Bean{}, Bean{}};
+    vector<Bean> beans = {Bean{true}, Bean{false}};
     we_cool(beans);
     return 0;
 }
 ```
 
+```bash
+$ g++ -std=c++11 -o coolbeans coolbeans.cc
+$ ./coolbeans
+We cool.
+```
+
 ### Java
 
-```java
-// NOTE: This class is in its own .java file
-public class Bean {
-    private boolean mCool = false;
+Bean.java
 
-    public Bean() {
+```java
+package coolbeans;
+
+public class Bean {
+    private boolean mCool;
+
+    public Bean(boolean cool) {
+        mCool = cool;
     }
 
     public boolean isCool() {
@@ -95,12 +110,18 @@ public class Bean {
         mCool = cool;
     }
 }
+```
 
-/*****************************************************/
+CoolBeans.java
+
+```java
+package coolbeans;
 
 import java.util.ArrayList;
 
-public class Main {
+import coolbeans.Bean;
+
+public class CoolBeans {
     public static void weCool(ArrayList<Bean> beans) {
         for (Bean bean : beans) {
             if (!bean.isCool()) {
@@ -112,11 +133,17 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Bean> beans = new ArrayList<>();
-        beans.add(new Bean());
-        beans.add(new Bean());
+        beans.add(new Bean(true));
+        beans.add(new Bean(false));
         weCool(beans);
     }
 }
+```
+
+```bash
+$ javac -d . -cp . CoolBeans.java Bean.java
+$ java coolbeans.CoolBeans
+We cool.
 ```
 
 ### Perl
@@ -126,10 +153,12 @@ public class Main {
 
 ### Python
 
+coolbeans.py
+
 ```python
 class Bean:
-    def __init__(self):
-        self.cool = False
+    def __init__(self, cool):
+        self.cool = cool
     def is_cool(self):
         return self.cool
     def be_cool(self, cool):
@@ -141,8 +170,13 @@ def we_cool(beans):
             bean.be_cool(True)
     print("We cool.")
 
-beans = [Bean(), Bean()]
+beans = [Bean(True), Bean(False)]
 we_cool(beans)
+```
+
+```bash
+$ python coolbeans.py
+We cool.
 ```
 
 Doesn't look too different from the pseudo code, but this is real Python code!

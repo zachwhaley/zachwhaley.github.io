@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+  font-size: 120%;
   width: 45em;
   margin: auto;
 }
@@ -91,7 +91,7 @@ a:hover {
 
 code {
   font-family: 'Inconsolata', sans-serif;
-  font-weight: 400;
+  font-size: 120%;
 }
 
 /* This comes from github.com */

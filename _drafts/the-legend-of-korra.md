@@ -1,14 +1,10 @@
 ---
 layout: post
-title: The Legend of Korra
+title: What The The Legend Of Korra Means To Me
 ---
 
-The finale of The Legend of Korra ended a couple of weeks ago.
-
-The ending made me so happy, but I couldn't quite put into words why.
-
-This past morning, while listening to the ending soundtrack, I started crying.
-I finally understood why I was so happy.
+This past morning, while listening to the ending soundtrack, I started crying.  I finally
+understood why the ending of *The Legend Of Korra* made me so happy.
 
 I'm a heterosexual 26 year old male, married to a wonderful woman. We are pregnant with our
 first child and daughter.

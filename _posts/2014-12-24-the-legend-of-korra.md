@@ -4,7 +4,7 @@ title: What The Legend Of Korra Meant To Me
 ---
 
 This past morning, while listening to the [ending soundtrack](https://soundcloud.com/jeremy-zuckerman/the-legend-of-korra?in=jeremy-zuckerman/sets/from-the-legend-of-korra)
-, I started crying.  I finally understood why the ending of *The Legend Of Korra* made me so
+, I started crying and I finally understood why the ending of *The Legend Of Korra* made me so
 happy.
 
 I'm a heterosexual 26 year old male, married to a wonderful woman. We are pregnant with our

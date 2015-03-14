@@ -87,6 +87,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.post img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
 /* Code */
 
 code {

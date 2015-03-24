@@ -1,2 +1,5 @@
 name: Zach Whaley's website
-markdown: redcarpet
+
+# Build settings
+markdown: kramdown
+permalink: pretty

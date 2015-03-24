@@ -1,4 +1,6 @@
+# Site settings
 name: Zach Whaley's website
+url: http://zachwhaleys.website
 
 # Build settings
 markdown: kramdown

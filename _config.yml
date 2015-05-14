@@ -3,5 +3,5 @@ name: Zach Whaley's website
 url: http://zachwhaleys.website
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty

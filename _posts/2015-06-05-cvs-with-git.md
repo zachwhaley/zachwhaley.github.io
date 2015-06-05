@@ -3,7 +3,7 @@ layout: post
 title: CVS with Git
 ---
 
-I'm working on a project in CVS (What! that's ancient; I know, right?) and to say the least it
+I'm working on a project in CVS (What! that's ancient; I know, right?) and to say the least, it
 sucks ass.
 
 Lemme take a few words to say CVS is really annoying.

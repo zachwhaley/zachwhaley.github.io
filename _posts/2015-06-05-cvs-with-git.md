@@ -12,7 +12,7 @@ Commits are per file, so forget about your change being traceable.  Commits are 
 this means if your commit includes more than one file, someone else could be updating while
 you are commiting and get only half of your changes, wtf!  Renaming and/or moving files can't
 be done.  Branches are expensive and hard to do; also, merging branches is just as effective
-as commit a patch with a commit message like "Good luck".  Basically your history is stuck in
+as committing a patch with a commit message like "Good luck".  Basically your history is stuck in
 the old branch, so don't delete branches (even though they are a huge pain).
 
 

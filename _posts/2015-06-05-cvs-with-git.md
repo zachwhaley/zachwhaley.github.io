@@ -33,7 +33,9 @@ Don't compile anything, because we'll need to figure out what files are generate
 actually in the repo.
 
 Go to GitHub's [gitignore repo](https://github.com/github/gitignore) and find some gitignore
-files for your project, i.e. C.gitignore for C, Python.gitignore for Python, etc.
+files for your project, i.e.
+[C.gitignore](https://github.com/github/gitignore/blob/master/C.gitignore) for C,
+[Python.gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore) for Python, etc.
 
 Create a file at the base of your CVS repo named `.gitignore` and add the contents of the
 gitignores you found on GitHub.  This will be used to filter out general generated files.

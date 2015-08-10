@@ -6,15 +6,13 @@ title: CVS with Git
 I'm working on a project in CVS (What! that's ancient; I know, right?) and to say the least, it
 sucks ass.
 
-Lemme take a few words to say CVS is really annoying.
+Lemme take a few words to say CVS is really annoying:
 
-Commits are per file, so forget about your change being traceable.  Commits are not atomic!
-this means if your commit includes more than one file, someone else could be updating while
-you are commiting and get only half of your changes, wtf!  Renaming and/or moving files can't
-be done.  Branches are expensive and hard to do; also, merging branches is just as effective
-as committing a patch with a commit message like "Good luck".  Basically your history is stuck in
-the old branch, so don't delete branches (even though they are a huge pain).
-
+1. Commits are per file, so forget about your change being traceable
+2. Commits are not atomic!  This means if your commit includes more than one file, someone else could be updating while you are commiting and get only half of your changes; **WTF!**
+3. Renaming and/or moving files can't be done without modifying files in the CVS directories
+4. Branches are expensive and hard to do.
+5. And merging branches is just as effective as committing a patch with a commit message like "Good luck!" Basically your history is stuck in the old branch, so don't delete branches (even though they are a huge pain)
 
 Alright, now how did I "fix" this?  I put Git in my CVS checkout :) because Git solves all my
 source control problems.

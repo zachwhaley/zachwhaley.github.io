@@ -36,7 +36,16 @@ files for your project, i.e.
 [Python.gitignore](https://github.com/github/gitignore/blob/master/Python.gitignore) for Python, etc.
 
 Create a file at the base of your CVS repo named `.gitignore` and add the contents of the
-gitignores you found on GitHub.  This will be used to filter out general generated files.
+gitignores you found on GitHub.
+
+Also add CVS files:
+
+```
+CVS/
+.cvsignore
+```
+
+This will be used to filter out general generated files.
 
 Create your Git repository
 

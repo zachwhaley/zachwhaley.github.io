@@ -58,7 +58,7 @@ Add all pertinent code to the git repo.  Stay clear of binaries and generated fi
 
 ```bash
 $ git add [files]
-$ git commit -m 'Let There Be Code'
+$ git commit -m 'Let There Be Code!'
 ```
 
 Now build your code.  Once the build is complete, find out what files were generated that

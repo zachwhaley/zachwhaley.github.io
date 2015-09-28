@@ -6,7 +6,7 @@ title: CVS with Git
 I'm working on a project in CVS (What! that's ancient; I know, right?) and to say the least, it
 sucks ass.
 
-Lemme take a few words to say CVS is really annoying:
+Lemme take a few words to say, CVS is really annoying:
 
 1. Commits are per file, so forget about your change being traceable
 2. Commits are not atomic!  This means if your commit includes more than one file, someone else could be updating while you are commiting and get only half of your changes; **WTF!**

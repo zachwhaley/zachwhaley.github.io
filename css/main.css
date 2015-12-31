@@ -5,13 +5,12 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-size: 120%;
-  width: 45em;
+  font-size: 125%;
+  max-width: 960px;
   margin: auto;
 }
 
 h1, h2 {
-  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
@@ -79,6 +78,11 @@ a:hover {
 
 /* Post */
 
+.post {
+  line-height: 1.75;
+  max-width: 800px;
+}
+
 .post a {
   color: darkred;
 }
@@ -96,7 +100,7 @@ a:hover {
 
 code {
   font-family: 'Inconsolata', sans-serif;
-  font-size: 120%;
+  font-size: 125%;
 }
 
 /* This comes from github.com */

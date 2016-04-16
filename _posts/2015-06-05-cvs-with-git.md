@@ -23,9 +23,9 @@ source control problems.
 
 Start by checking out your CVS repository
 
-```bash
+~~~ bash
 $ cvs co [your-repo]
-```
+~~~
 
 Don't compile anything, because we'll need to figure out what files are generated and which are
 actually in the repo.
@@ -40,34 +40,34 @@ gitignores you found on GitHub.
 
 Also add CVS files:
 
-```
+~~~
 CVS/
 .cvsignore
-```
+~~~
 
 This will be used to filter out general generated files.
 
 Create your Git repository
 
-```bash
+~~~ bash
 $ cd /path/to/your/repo/
 $ git init
-```
+~~~
 
 Add all pertinent code to the git repo.  Stay clear of binaries and generated files.
 
-```bash
+~~~ bash
 $ git add [files]
 $ git commit -m 'Let There Be Code!'
-```
+~~~
 
 Now build your code.  Once the build is complete, find out what files were generated that
 aren't being caught by your `.gitignore` file
 
-```bash
+~~~ bash
 # The generated files will show up as untracked files.
 $ git status
-```
+~~~
 
 Add those generated files to your `.gitignore` file
 
@@ -78,10 +78,10 @@ branches.
 
 Make sure to commit early and often to keep your work concise and on track.
 
-```bash
+~~~ bash
 # Create and checkout a branch from master for a new feature
 $ git checkout -b new-feature master
-```
+~~~
 
 While developing, no doubt others will commit changes to your CVS repo and
 you'll need a way to safely get those changes without breaking your work.
@@ -89,13 +89,13 @@ you'll need a way to safely get those changes without breaking your work.
 Use your master branch as a staging area for CVS changes.  Don't directly commit any of your
 changes to master.
 
-```bash
+~~~ bash
 # Checkout and update your master branch with the latest from CVS
 $ git checkout master
 $ cvs up -Pd
 $ git add -A [files]
 $ git commit -m 'cvs update'
-```
+~~~
 
 To bring these changes into your feature/bug branch, use `git rebase`
 
@@ -103,12 +103,12 @@ To bring these changes into your feature/bug branch, use `git rebase`
 give it and then replay the commits you've been making onto that branch, then save that history
 onto your current branch.
 
-```bash
+~~~ bash
 # Checkout your feature branch again and replay your changes onto master's changes that it got
 # from CVS
 $ git checkout new-feature
 $ git rebase master
-```
+~~~
 
 Your changes are now up-to-date with changes from CVS.
 
@@ -120,7 +120,7 @@ use `git merge` to merge your changes with the CVS changes and then commit using
 [Merge](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) creates a
 commit to tie two branches together historically.
 
-```bash
+~~~ bash
 # Make sure your master branch has the latest changes from CVS
 $ git checkout master
 $ cvs up -Pd
@@ -129,14 +129,14 @@ $ git commit -m 'cvs update'
 # Then merge and commit your changes
 $ git merge new-feature
 $ cvs commit
-```
+~~~
 
 It's a good idea to delete merged branches, since the history will not be deleted and it keeps
 the list of branches to just the ones being currently worked on.
 
-```bash
+~~~ bash
 # List your branches
 $ git branch
 # Delete a merged branch
 $ git branch -d new-feature
-```
+~~~

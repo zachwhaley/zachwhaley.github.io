@@ -8,6 +8,7 @@ body {
   font-size: 125%;
   max-width: 960px;
   margin: auto;
+  padding: 10px;
 }
 
 h1, h2 {
@@ -26,23 +27,19 @@ a:hover {
 
 /* header */
 
-.header h1 {
+header h1 {
   border-bottom: 1px solid darkred;
-}
-
-.header a:hover {
-  color: black;
 }
 
 /* footer */
 
-.footer {
+footer {
   margin-top: 5em;
   margin-bottom: 2.5em;
   text-align: center;
 }
 
-.footer a {
+footer a {
   color: grey;
   text-decoration: none;
 }
@@ -73,14 +70,14 @@ a:hover {
 /* Content */
 
 .content {
-  margin-top: 2em;
+  margin: auto;
+  width: 80%;
 }
 
 /* Post */
 
 .post {
   line-height: 1.75;
-  max-width: 800px;
 }
 
 .post a {

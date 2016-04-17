@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<p>{{ page.date | date_to_string }}</p>
-
-<div class='post'>
-  {{ content }}
+<h2>{{ page.date | date_to_string }}</h2>
+<div class='content'>
+  <div class='post'>
+    {{ content }}
+  </div>
 </div>

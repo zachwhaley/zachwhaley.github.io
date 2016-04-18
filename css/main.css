@@ -7,7 +7,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 125%;
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto;
   padding: 10px;
 }
 
@@ -90,14 +90,14 @@ footer a:hover {
 /* Content */
 
 .content {
-  margin: auto;
-  width: 80%;
+  margin: 0 auto;
+  max-width: 690px;
 }
 
 /* Post */
 
 .post {
-  line-height: 1.75;
+  line-height: 1.5;
 }
 
 .post a {

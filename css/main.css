@@ -31,6 +31,20 @@ header h1 {
   border-bottom: 1px solid darkred;
 }
 
+.subtitle {
+  color: grey;
+}
+
+.subtitle a {
+  color: grey;
+  text-decoration: none;
+}
+
+.subtitle a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
 /* footer */
 
 footer {
@@ -40,6 +54,11 @@ footer {
 }
 
 footer a {
+  color: grey;
+  text-decoration: none;
+}
+
+footer a:hover {
   color: grey;
   text-decoration: none;
 }

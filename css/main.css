@@ -1,17 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:300);
-@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300|Open+Sans|Inconsolata);
 
 /* Common */
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 125%;
+  font-family: 'Open Sans', sans-serif;
   max-width: 960px;
   margin: 0 auto;
   padding: 10px;
 }
 
-h1, h2 {
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 
@@ -28,6 +27,7 @@ a:hover {
 /* header */
 
 header h1 {
+  font-size: 2.5em;
   border-bottom: 1px solid darkred;
 }
 
@@ -68,6 +68,9 @@ footer a:hover {
 
 /* I got this bit of fancy from http://stackoverflow.com/questions/7647195/evenly-spaced-list-items */
 .menu {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.4em;
   height: auto;
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
@@ -90,14 +93,15 @@ footer a:hover {
 /* Content */
 
 .content {
+  font-size: 20px;
   margin: 0 auto;
-  max-width: 690px;
+  max-width: 740px;
 }
 
 /* Post */
 
 .post {
-  line-height: 1.5;
+  line-height: 1.75em;
 }
 
 .post a {
@@ -113,6 +117,18 @@ footer a:hover {
   max-width: 100%;
 }
 
+/* Archive */
+
+.archive {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.archive ul {
+  list-style-type: none;
+}
+
 /* Code */
 
 code {
@@ -122,7 +138,7 @@ code {
 /* This comes from github.com */
 pre {
   border: 1px solid #ddd;
-  line-height: 19px;
+  line-height: 1.25em;
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px;

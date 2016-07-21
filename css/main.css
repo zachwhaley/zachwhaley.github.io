@@ -116,12 +116,11 @@ footer a:hover {
 /* Code */
 
 code {
-  font-family: 'Inconsolata', sans-serif;
+  font-family: 'Inconsolata', monospace;
 }
 
 /* This comes from github.com */
 pre {
-  font-size: 15px;
   border: 1px solid #ddd;
   line-height: 19px;
   overflow: auto;

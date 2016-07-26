@@ -1,4 +1,4 @@
-[zachwhaleys.website](http://zachwhaleys.website)
+Zach Whaley's Website
 ====================
 
-Zach Whaley's website.
+[zachwhaleys.website](http://zachwhaleys.website)

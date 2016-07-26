@@ -3,6 +3,8 @@ layout: default
 title: Zach Whaley's
 ---
 
+{% assign post = site.posts.first %}
+
 <div class='menu'>
   <div class='item' title='GitHub'>
       <a href='https://github.com/zachwhaley'>Code</a>
@@ -10,27 +12,14 @@ title: Zach Whaley's
   <div class='item' title='Twitter'>
       <a href='https://twitter.com/zachwhaley'>Tweets</a>
   </div>
-  <div class='item' title='Ellie'>
-      <a href='http://instagram.com/zbwhaley'>Daughter</a>
+  <div class='item' title='Instagram'>
+      <a href='http://instagram.com/zbwhaley'>Family</a>
   </div>
-  <div class='item' title='Greyhounds'>
-      <a href='https://goo.gl/photos/iGDWwoemgWGdte7H6'>Greyhounds</a>
+  <div class='item' title='Blog'>
+      <a href='{{ post.url }}'>Thoughts</a>
   </div>
-  <div class='item' title='Work'>
+  <div class='item' title='Résumé'>
       <a href='/work'>Work</a>
   </div>
   <span class='stretch'></span>
 </div>
-
-<div class='content'>
-  {% assign post = site.posts.first %}
-  <h1><a href='{{ post.url }}'>{{ post.title }}</a></h1>
-
-  <div class='post'>
-    {{ post.content }}
-  </div>
-</div>
-
-<footer>
-  <a href='/archive'>archive</a>
-</footer>

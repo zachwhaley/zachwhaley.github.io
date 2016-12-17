@@ -31,6 +31,10 @@ header h1 {
   border-bottom: 1px solid darkred;
 }
 
+.supertitle {
+  text-align: center;
+}
+
 .subtitle {
   color: grey;
 }

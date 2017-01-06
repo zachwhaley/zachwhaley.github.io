@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class='subtitle'>
-  <h2>{{ page.date | date_to_string }}</h2>
+  <h2>
+    <a href="{{ page.url }}">{{ page.date | date_to_string }}</a>
+  </h2>
 </div>
 <div class='content'>
   <div class='post'>

@@ -84,7 +84,12 @@ footer a:hover {
 .item {
   width: auto;
   vertical-align: top;
+  padding-bottom: 15px;
+}
+@media (min-width: 465px) {
+.item {
   display: inline-block;
+}
 }
 
 .stretch {

@@ -97,15 +97,15 @@ footer a:hover {
 /* Content */
 
 .content {
-  font-size: 20px;
+  font-size: 1.1rem;
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 818px;
 }
 
 /* Post */
 
 .post {
-  line-height: 1.75em;
+  line-height: 1.5;
 }
 
 .post a {
@@ -142,7 +142,6 @@ code {
 /* This comes from github.com */
 pre {
   border: 1px solid #ddd;
-  line-height: 1.25em;
   overflow: auto;
   padding: 6px 10px;
   border-radius: 3px;

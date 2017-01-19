@@ -77,7 +77,7 @@ dircolors -p > ~/.dir_colors
 
 This file defines all the color codes `ls` will use when printing files and directories.
 
-I then used the [ANSI SGR parameter code 38](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes) to specify colors from the extended 256 foreground colors.
+I then used the [ANSI SGR parameter code 38](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes) to specify colors from the extended 256 colors.
 
 For example: From dircolors, the config to set directory colors, `DIR`, was set to `1;34`, which results in a bright(1) blue(34) color.
 
@@ -87,7 +87,7 @@ DIR 1;34
 
 But, as I've mentioned, the Solarized "bright blue" is not actually blue, but a gray hue.
 
-Using the `38;5` ANSI code, I was able to specify the ANSI 256(38) foreground(5) color blue(4), and set the font text to **bold**(1), NOT bright!
+Using the `38;5` ANSI code, I was able to specify the **bold**(1) ANSI 256(38;5) color blue(4), NOT bright!
 
 ```
 DIR 1;38;5;4

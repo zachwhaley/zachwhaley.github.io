@@ -97,4 +97,4 @@ DIR 1;38;5;4
 
 And there you go!
 
-You can find my `.dir_colors`, along with all my home directory config files on [GitHub](https://github.com/zachwhaley/dotfiles/).
+You can find the rest of my `.dir_colors` file, along with all my home directory config files on [GitHub](https://github.com/zachwhaley/dotfiles/).

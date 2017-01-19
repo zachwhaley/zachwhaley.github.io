@@ -22,7 +22,7 @@ instead of the distinguishable colors we would expect.
 !["Bright" blue](http://i.imgur.com/FqQwFpK.png)
 
 This is because `ls` uses ["bright"](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors) colors for directories and certain files, but Solarized
-has overriden these "bright" colors with its base colors.
+has overridden these "bright" colors with its base colors.
 
 But I don't want "bright" colors, I want **bold** text.  So I spent some time googling and
 hacking on config files, and I eventually got what I wanted!  `ls` to print colored
@@ -76,9 +76,9 @@ I created a `.dir_colors` file in my home directory using dircolors.
 dircolors -p > ~/.dir_colors
 ```
 
-This file defines all the colors codes `ls` should use when printing files and directories.
+This file defines all the color codes `ls` should use when printing files and directories.
 
-I then used the [ANSI SGR parameter code 38](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes) to specify colors from the extended foreground colors.
+I then used the [ANSI SGR parameter code 38](https://en.wikipedia.org/wiki/ANSI_escape_code#CSI_codes) to specify colors from the extended 256 foreground colors.
 
 For example: From dircolors, the config to set directory colors, `DIR`, was set to `1;34`, which results in a bright(1) blue(34) color.
 

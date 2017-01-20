@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Solarized + `tmux` + ls + bold text
+title: Solarized + tmux + ls + bold text
 ---
 
 How I got,

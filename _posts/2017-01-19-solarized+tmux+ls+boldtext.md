@@ -3,7 +3,7 @@ layout: post
 title: Solarized + tmux + ls + bold text
 ---
 
-How I got,
+How I got
 <i style="background:#002b36;padding-left:4px;padding-right:2px;margin-right:2px;">
 <span style="color:#eee8d5;">S</span>
 <span style="color:#b58900;">o</span>

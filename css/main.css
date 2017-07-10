@@ -81,12 +81,13 @@ footer a:hover {
 .item {
   width: 100%;
   vertical-align: top;
-  padding-bottom: 15px;
+  padding-bottom: 65px;
 }
 @media (min-width: 465px) {
 .item {
   width: auto;
   display: inline-block;
+  padding-bottom: 0px;
 }
 }
 

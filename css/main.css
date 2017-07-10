@@ -134,6 +134,8 @@ footer a:hover {
 
 .archive ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Code */

@@ -1,0 +1,271 @@
+---
+layout: post
+title: Kerberos
+---
+
+In this post, I'm going to attempt to explain Kerberos authentication using a sports analogy.
+
+# The Kerberos Game
+Imagine you want to go to a sporting event in town.
+
+The sporting event is using a super secure ticket system to make sure people going to the game
+are who they say they are, and that they are purchasing valid tickets for the game.
+
+To facilitate this ticket system, the local Bank is helping to validate everyone,
+since in this town they have everyone's bank passwords.
+
+The 4 main players in this ticket system are:
+
+1. The Person (The User)
+2. The Ticket Booth (The Ticket Granting Server)
+3. The Ticket Gate (The HTTP Service)
+4. The Bank (The Authentication Server)
+
+The basic flow of the ticket system is:
+
+1. Go to the Ticket Booth and ask for a ticket.
+2. Ticket Booth uses Bank to confirm your identity, then gives you a ticket.
+3. Take your ticket to the Ticket Gate
+4. Ticket Gate uses Bank to confirm your purchase with the Ticket Booth.
+5. Enjoy the game!
+
+## The Ticket Booth
+So you go to the Ticket Booth and ask to purchase a ticket to the game.
+The Ticket Booth asks for your name, before taking your money, because they need to verify your identity.
+The Ticket Booth sends your name to the Bank requesting a verification of your identity.
+
+Now, as a part of this super secure ticket system, the Bank has agreed that they will **NOT** send
+anyone's password to anyone else. Only you and the Bank know your password, and the same goes
+for the Ticket Booth and Ticket Gate.
+
+Now let's pause real quick and explain _encoding_ and _decoding_
+
+* Encoding is writing something down in a secret language using a _key_
+* Decoding is using a _key_ to decipher something written in a secret language.
+
+A message written using a _key_, can only be read by someone with that same _key_.
+
+Okay, onwards!
+
+Upon receiving your name from the Ticket Booth, the Bank first checks that you and the
+Ticket Booth are in the Bank's records and that you both have passwords.
+The Bank then creates a temporary password called a session key, which we will call the _ticket key_.
+
+The Bank then writes two messages for the Ticket Booth, Message A and B.
+Message A has your name and the _ticket key_, and is encoded using your password.
+Message B is almost identical, it also has your name and the _ticket key_, but is encoded using the **Ticket Booth's** password.
+
+The Bank then gives these messages to the Ticket Booth.
+Notice that the Ticket Booth can decode Message B, but NOT Message A,
+because Message B was encoded with the Ticket Booth's password,
+and Message A was encoded with your password, which the Ticket Booth was not given.
+
+    BANK SEND Message A & B
+
+     Message A           Message B
+    ╔═your password═╗   ╔═ticket booth password═╗
+    ║   your name   ║   ║       your name       ║
+    ║  ticket key   ║   ║      ticket key       ║
+    ╚═══════════════╝   ╚═══════════════════════╝
+
+But the Ticket Booth does not decode Message B yet, instead it gives
+these messages to you and asks you to decode Message A to authenticate yourself
+and then send the Ticket Booth a message with which game you'd like to buy a ticket for.
+
+Looking at the two messages, you decode Message A with your password and find your
+name and the Bank's _ticket key_, but you can NOT decode Message B, since you do not
+have the Ticket Booth's password.
+
+    YOU DECODE Message A
+
+    ✓ Message A         ✗ Message B
+    ┌─your password─┐   ╔═ticket booth password═╗
+    │   your name   │   ║       your name       ║
+    │  ticket key   │   ║      ticket key       ║
+    └───────────────┘   ╚═══════════════════════╝
+
+Decoding Message A and sending the _ticket key_ to the Ticket Booth is enough to
+authenticate yourself to the Ticket Booth, since the Ticket Booth could decode
+Message B and compare the _ticket keys_, but you want to make sure that this
+Ticket Booth is a valid Ticket Booth and not some scammer.
+
+So now it is your turn to write some messages!
+You are going to write two messages for the Ticket Booth, Message C and D.
+Message C has your name, and is encoded using the _ticket key_ (only someone with the _ticket key_ can decode it).
+Message D has the game you want a ticket for, and is not encoded, but written in plain text (it is not a secret that you want to go to this game)
+
+    YOU SEND Message C & D
+
+     Message C        Message D
+    ╔═ticket key═╗   ┌─────────────┐
+    ║ your name  ║   │  game name  │
+    ╚════════════╝   └─────────────┘
+
+Upon recieving your messages, the Ticket Booth first checks that the sporting event in Message D exists and that it has a Ticket Gate.
+The Ticket Booth then decodes Message B, finds the _ticket key_, and uses it to decode Message C.
+The Ticket Booth then compares your name in Message C to your name in Message B;
+if they match, then you and the Ticket Booth have authenticated yourselves!
+
+
+    TICKET BOOTH DECODE Message B
+
+    ✗ Message A         ✓ Message B
+    ╔═your password═╗   ┌─ticket booth password─┐
+    ║   your name   ║   │       your name       │
+    ║  ticket key   ║   │      ticket key       │
+    ╚═══════════════╝   └───────────────────────┘
+
+    TICKET BOOTH DECODE Message C
+
+    ✓ Message C       Message D
+    ┌─ticket key─┐   ┌─────────────┐
+    │ your name  │   │  game name  │
+    └────────────┘   └─────────────┘
+
+    TICKET BOOTH COMPARE Names
+
+    ✓ (Message B(your name)) EQUALS (Message C(your name))
+
+This works because the only way that the Ticket Booth could have decoded Message C from you,
+which was encoded with the Bank's _ticket key_, was to decode Message B from the Bank,
+which was encoded with the Ticket Booth's password.
+
+And the only way YOU could have gotten the _ticket key_ from the Bank, in the first place,
+was to be able to decode Message A, which was encoded with your password.
+
+Woah!
+
+## The Ticket
+But you still need your ticket to get into the game.
+
+Satisfied that _you_ are you, the Ticket Booth asks the Bank to create another
+session key, that we will call the _gate key_, and write two more messages, Message E and F.
+Message E has your name, the Ticket Gate's name, and the _gate key_, and is encoded using the **Ticket Gate's** password.
+Message F has the Ticket Gate's name and the _gate key_, and is encoded using the original _ticket key_.
+The Ticket Booth takes these messages and sends them to you as your "ticket" to the game!
+
+    BANK SEND Message E & F
+
+     Message E           Message F
+    ╔═gate password═╗   ╔═ticket key═╗
+    ║   your name   ║   ║  gate name ║
+    ║   gate name   ║   ║  gate key  ║
+    ║   gate key    ║   ╚════════════╝
+    ╚═══════════════╝
+
+You now take your "ticket" to the Ticket Gate to finally enter the game (sort of...)
+
+## The Ticket Gate
+Once you get to the Ticket Gate, they also want to make sure _you_ are you and
+that you bought that "ticket" from a valid Ticket Booth.
+They ask you to write them a message using the _gate key_ the Bank created and the Ticket Booth gave you.
+
+You start by decoding Message F using the original _ticket key_ and find the _gate key_,
+and similar to before, you write a message, Message G, with your name and encode this message using the _gate key_.
+
+You then send the Ticket Gate Message G and the message you got from the Ticket Booth, Message E.
+
+    YOU DECODE Message F
+
+    ✗ Message E         ✓ Message F
+    ╔═gate password═╗   ┌─ticket key─┐
+    ║   your name   ║   │  gate name │
+    ║   gate name   ║   │  gate key  │
+    ║   gate key    ║   └────────────┘
+    ╚═══════════════╝
+
+    YOU SEND Message E & G
+
+     Message E           Message G
+    ╔═gate password═╗   ╔══gate key══╗
+    ║   your name   ║   ║  your name ║
+    ║   gate name   ║   ╚════════════╝
+    ║   gate key    ║
+    ╚═══════════════╝
+
+The Ticket Gate decodes Message E using it's password, and finds the _gate key_, which it uses to
+decode the message you wrote, Message G.
+
+The Ticket Gate then compares your name from Message E and Message G;
+if they match, then the Ticket Gate has validated that _you_ are you and that you bought this ticket from a valid Ticket Booth!
+
+    TICKET GATE DECODE Message E
+
+    ✓ Message E          Message G
+    ┌─gate password─┐   ╔══gate key══╗
+    │   your name   │   ║  your name ║
+    │   gate name   │   ╚════════════╝
+    │   gate key    │
+    └───────────────┘
+
+    TICKET GATE DECODE Message G
+
+    ✓ Message E         ✓ Message G
+    ┌─gate password─┐   ┌──gate key──┐
+    │   your name   │   │  your name │
+    │   gate name   │   └────────────┘
+    │   gate key    │
+    └───────────────┘
+
+    TICKET GATE COMPARE Names
+
+    ✓ (Message E(your name)) EQUALS (Message G(your name))
+
+Again, this works becuase the only way that the Ticket Gate could have decoded Message G from
+you, which was encoded with the Bank's _gate key_, was to decode Message E from the Bank, which
+was encoded with the Ticket Gate's password.
+
+And the only way YOU could have gotten the _gate key_ from the Bank, was to be able to decode
+Message F, which was encoded with the Bank's _ticket key_, which you had because you had
+authenticated with a valid Ticket Booth.
+
+Woah!!
+
+## The Game
+So the Ticket Gate is now ready to let you into the game by...
+creating another message, Message H, which contains the gate's name and is encoded using the _gate key_.
+
+The Ticket Gate sends you this final message.
+
+    TICKET GATE SEND Message H
+
+     Message H
+    ╔══gate key══╗
+    ║  gate name ║
+    ╚════════════╝
+
+You decode Message H using the _gate key_, and compare the Ticket Gate's name from Message H to
+the Ticket Gate's name from Message F.
+
+    YOU DECODE Message H
+
+    ✓ Message H
+    ┌──gate key──┐
+    │  gate name │
+    └────────────┘
+
+    YOU COMPARE Gates
+
+    ✓ Message F      ✓ Message H
+    ┌─ticket key─┐   ┌──gate key──┐
+    │  gate name │   │  gate name │
+    │  gate key  │   └────────────┘
+    └────────────┘
+
+    ✓ (Message F(gate name)) EQUALS (Message H(gate name))
+
+This last step is important because it lets you verify the Ticket Gate is not lying about who it is.
+Because the only way this Ticket Gate could have written a message encoded with the _gate key_ was
+if it was able to decode Message E, written by the Bank and encoded with the Ticket Gate's
+password.
+
+And because the Ticket Gate's name in Message H, written by the Ticket Gate, matches the Ticket
+Gate name in Message F, written by the Bank, you can be certain that this Ticket Gate is the gate to the game you've been dying to go see.
+
+The End!
+
+## Resources
+
+For a more techical description of Kerberos, see the [Kerberos Protocol Wikipedia page](https://en.wikipedia.org/wiki/Kerberos_(protocol)#Protocol)
+
+For a somewhat less technical description (but still pretty technical), see this [Blog Post](http://www.roguelynn.com/words/explain-like-im-5-kerberos/)

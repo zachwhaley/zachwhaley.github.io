@@ -38,13 +38,63 @@ eli is a simply made text editor written in C.
 </p>
 </div>
 
+<div id='contributions'>
+<h1><b>Contributions</b></h1>
+
+<header>
+  <a href='http://www.zsh.org/'><h2>Zsh</h2></a>
+  <div class='subtitle'>
+    <a href='https://github.com/zsh-users/zsh/commit/ea7b4d4b2da60fe44019b1c0e298a202a3b211b7'>Updated Perforce completion</a>
+  </div>
+</header>
+<p>
+This was a major update to Zsh's Perforce completion script that added tab completion for the 2016.1 release of Perforce's command line tool.
+</p>
+
+<header>
+  <a href='https://brew.sh/'><h2>Homebrew</h2></a>
+  <div class='subtitle'>
+    <a href='https://github.com/Homebrew/brew/pull/1615'>Add a method for installing fish function files</a>
+  </div>
+</header>
+<p>
+Fish shell allows third-party software vendors to put their own function files in a directory for their software.
+For brew installed Fish shell, this is /usr/local/share/fish/vendor_functions.d
+</p>
+
+<header>
+  <div class='subtitle'>
+    <a href='https://github.com/Homebrew/brew/pull/1616'>Differentiate zsh completion files and function files</a>
+  </div>
+</header>
+<p>
+When installing a file to zsh/site-functions directory, it is assumed this is a zsh completion file, and the zsh completion caveat is printed after installation.
+<br>
+But not all files in the zsh/site-functions directory are completion files.
+Some are files for functions that can be loaded on demand with zsh's autoload command.
+</p>
+
+<header>
+  <a href='https://github.com/sorin-ionescu/prezto/'><h2>Prezto</h2></a>
+  <div class='subtitle'>
+    <a href='https://github.com/sorin-ionescu/prezto/pull/1433'>Edit pyenv virtualenv-init check to support non-brew installations</a>
+  </div>
+</header>
+<p>
+If the pyenv virtualenv plugin is installed using the pyenv-installer
+app script or directly via a Git clone, then the pyenv-virtualenv-init
+executable, that the pyenv virtualenv-init command uses, will not
+exist in the user's PATH.
+</p>
+</div>
+
 <div id='work'>
 <h1><b>Work</b></h1>
 
 <header>
   <h2>Software Engineer</h2>
   <div class='subtitle'>
-    <a href='http://www.cisco.com/'>Cisco Systems, Austin, TX (2013 - 2017)</a>
+    <a href='http://www.cisco.com/'>Cisco Systems, Austin, TX (2013 - Present)</a>
   </div>
 </header>
 <p>
@@ -112,55 +162,6 @@ tagged to a location.
 Specialized in Software Engineering and Development.  Graduated Magna Cum Laude
 </p>
 </div>
-
-<div id='contributions'>
-<h1><b>Open Source Contributions</b></h1>
-
-<header>
-  <a href='http://www.zsh.org/'><h2>Zsh</h2></a>
-  <div class='subtitle'>
-    <a href='https://github.com/zsh-users/zsh/commit/ea7b4d4b2da60fe44019b1c0e298a202a3b211b7'>Updated Perforce completion</a>
-  </div>
-</header>
-<p>
-This was a major update to Zsh's Perforce completion script that added tab completion for the 2016.1 release of Perforce's command line tool.
-</p>
-
-<header>
-  <a href='https://brew.sh/'><h2>Homebrew</h2></a>
-  <div class='subtitle'>
-    <a href='https://github.com/Homebrew/brew/pull/1615'>Add a method for installing fish function files</a>
-  </div>
-</header>
-<p>
-Fish shell allows third-party software vendors to put their own function files in a directory for their software.
-For brew installed Fish shell, this is /usr/local/share/fish/vendor_functions.d
-</p>
-
-<header>
-  <div class='subtitle'>
-    <a href='https://github.com/Homebrew/brew/pull/1616'>Differentiate zsh completion files and function files</a>
-  </div>
-</header>
-<p>
-When installing a file to zsh/site-functions directory, it is assumed this is a zsh completion file, and the zsh completion caveat is printed after installation.
-<br>
-But not all files in the zsh/site-functions directory are completion files.
-Some are files for functions that can be loaded on demand with zsh's autoload command.
-</p>
-
-<header>
-  <a href='https://github.com/sorin-ionescu/prezto/'><h2>Prezto</h2></a>
-  <div class='subtitle'>
-    <a href='https://github.com/sorin-ionescu/prezto/pull/1433'>Edit pyenv virtualenv-init check to support non-brew installations</a>
-  </div>
-</header>
-<p>
-If the pyenv virtualenv plugin is installed using the pyenv-installer
-app script or directly via a Git clone, then the pyenv-virtualenv-init
-executable, that the pyenv virtualenv-init command uses, will not
-exist in the user's PATH.
-</p>
 
 <div id='charity'>
 <h1><b>Charity</b></h1>

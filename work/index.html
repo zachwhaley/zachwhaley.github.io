@@ -6,109 +6,41 @@ title: Zach Whaley
 <p>
 I am a tinkerer and tool maker, with a love for making things easy and intuitive.
 </p>
-<p>
-I am proficient in C++, Python, Git, and Java, and I have a good understanding of
-Agile Methodologies, Object Oriented Programming, and Test Driven Development.
-</p>
-
-<div id='projects'>
-<h1><b>Projects</b></h1>
-
-<header>
-  <a href='http://zachwhaleys.website/bp4o'><h2>Better P4 Output</h2></a>
-</header>
-<p>
-A plugin to the Perforce command line tool to improve the readability of its output.
-</p>
-
-<header>
-  <a href='http://zachwhaleys.website/p4-completion'><h2>P4 Bash Completion</h2></a>
-</header>
-<p>
-A comprehensive bash completion script for the Perforce command line tool.
-</p>
-
-<header>
-  <a href='https://github.com/zachwhaley/eli'><h2>eli /ɛli/</h2></a>
-</header>
-<p>
-Short for Eliana and pronounced Ellie.
-<br>
-eli is a simply made text editor written in C.
-</p>
-
-<header>
-  <a href='https://github.com/zachwhaley/fin'><h2>fin /fɪn/</h2></a>
-</header>
-<p>
-Short for Griffin and pronounced Finn.
-<br>
-fin is a simply made unix shell written in C.
-</p>
-</div>
-
-<div id='contributions'>
-<h1><b>Contributions</b></h1>
-
-<header>
-  <a href='http://www.zsh.org/'><h2>Zsh</h2></a>
-  <div class='subtitle'>
-    <a href='https://github.com/zsh-users/zsh/commit/ea7b4d4b2da60fe44019b1c0e298a202a3b211b7'>Updated Perforce completion</a>
-  </div>
-</header>
-<p>
-This was a major update to Zsh's Perforce completion script that added tab completion for the 2016.1 release of Perforce's command line tool.
-</p>
-
-<header>
-  <a href='https://brew.sh/'><h2>Homebrew</h2></a>
-  <div class='subtitle'>
-    <a href='https://github.com/Homebrew/brew/pull/1615'>Add a method for installing fish function files</a>
-  </div>
-</header>
-<p>
-Fish shell allows third-party software vendors to put their own function files in a directory for their software.
-For brew installed Fish shell, this is /usr/local/share/fish/vendor_functions.d
-</p>
-
-<header>
-  <div class='subtitle'>
-    <a href='https://github.com/Homebrew/brew/pull/1616'>Differentiate zsh completion files and function files</a>
-  </div>
-</header>
-<p>
-When installing a file to zsh/site-functions directory, it is assumed this is a zsh completion file, and the zsh completion caveat is printed after installation.
-<br>
-But not all files in the zsh/site-functions directory are completion files.
-Some are files for functions that can be loaded on demand with zsh's autoload command.
-</p>
-
-<header>
-  <a href='https://github.com/sorin-ionescu/prezto/'><h2>Prezto</h2></a>
-  <div class='subtitle'>
-    <a href='https://github.com/sorin-ionescu/prezto/pull/1433'>Edit pyenv virtualenv-init check to support non-brew installations</a>
-  </div>
-</header>
-<p>
-If the pyenv virtualenv plugin is installed using the pyenv-installer
-app script or directly via a Git clone, then the pyenv-virtualenv-init
-executable, that the pyenv virtualenv-init command uses, will not
-exist in the user's PATH.
-</p>
-</div>
 
 <div id='work'>
 <h1><b>Work</b></h1>
 
 <header>
-  <h2>Senior Software Engineer</h2>
+  <h2>Senior Staff Software Engineer</h2>
   <div class='subtitle'>
     <a href='http://www.trendmicro.com/'>Trend Micro, Austin, TX (2017 - Present)</a>
   </div>
 </header>
 <p>
-Working on management and core functionalities in Trend Micro's TippingPoint Threat Protection System.
+Working on DevOps, Cloud Infrastructure, and Microservice/Serverless development for the Trend Micro Cloud One - Network Security service.
 </p>
+
+<ul>
+  <li>
+    Created the AWS cloud infrastructure for a multi-stage, multi-regional cloud security service using Terraform and CloudFormation.
+  </li>
+  <li>
+    Created repository templates, pipelines, and automation to allow dev teams to easily create and deploy new Serverless applications into our cloud service.
+  </li>
+  <li>
+    Created CI/CD pipelines to automate seamless deployment of infrastructure and application updates using Jenkins and GitHub Actions.
+  </li>
+</ul>
+
+<p>
+Worked on management and core functionalities in Trend Micro's TippingPoint Threat Protection System.
+</p>
+
+<ul>
+  <li>
+    Updated and patched a customized Linux OS and applications for FIPS compliance.
+  </li>
+</ul>
 
 <header>
   <h2>Software Engineer</h2>
@@ -165,6 +97,56 @@ Developed a testing tool to read and compare flight data, and present a user wit
 Worked on an iPhone app with a small group of OU undergraduates.  The app was an
 audio/location based social app that allowed users to record and share a 30 second audio clip
 tagged to a location.
+</p>
+</div>
+
+<div id='contributions'>
+<h1><b>Contributions</b></h1>
+
+<header>
+  <a href='http://www.zsh.org/'><h2>Zsh</h2></a>
+  <div class='subtitle'>
+    <a href='https://github.com/zsh-users/zsh/commit/ea7b4d4b2da60fe44019b1c0e298a202a3b211b7'>Updated Perforce completion</a>
+  </div>
+</header>
+<p>
+This was a major update to Zsh's Perforce completion script that added tab completion for the 2016.1 release of Perforce's command line tool.
+</p>
+
+<header>
+  <a href='https://brew.sh/'><h2>Homebrew</h2></a>
+  <div class='subtitle'>
+    <a href='https://github.com/Homebrew/brew/pull/1615'>Add a method for installing fish function files</a>
+  </div>
+</header>
+<p>
+Fish shell allows third-party software vendors to put their own function files in a directory for their software.
+For brew installed Fish shell, this is /usr/local/share/fish/vendor_functions.d
+</p>
+
+<header>
+  <div class='subtitle'>
+    <a href='https://github.com/Homebrew/brew/pull/1616'>Differentiate zsh completion files and function files</a>
+  </div>
+</header>
+<p>
+When installing a file to zsh/site-functions directory, it is assumed this is a zsh completion file, and the zsh completion caveat is printed after installation.
+<br>
+But not all files in the zsh/site-functions directory are completion files.
+Some are files for functions that can be loaded on demand with zsh's autoload command.
+</p>
+
+<header>
+  <a href='https://github.com/sorin-ionescu/prezto/'><h2>Prezto</h2></a>
+  <div class='subtitle'>
+    <a href='https://github.com/sorin-ionescu/prezto/pull/1433'>Edit pyenv virtualenv-init check to support non-brew installations</a>
+  </div>
+</header>
+<p>
+If the pyenv virtualenv plugin is installed using the pyenv-installer
+app script or directly via a Git clone, then the pyenv-virtualenv-init
+executable, that the pyenv virtualenv-init command uses, will not
+exist in the user's PATH.
 </p>
 </div>
 

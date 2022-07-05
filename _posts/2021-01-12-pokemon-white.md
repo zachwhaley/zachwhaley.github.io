@@ -10,21 +10,21 @@ Finally finished Pokémon White 😃
 <tr>
 <td>
   <a href="https://bulbapedia.bulbagarden.net/wiki/Samurott_(Pok%C3%A9mon)">
-    <img src="https://archives.bulbagarden.net/media/upload/b/b5/503Samurott.png">
+    <img src="/images/samurott.png">
     <p> Samurott </p>
   </a>
 </td>
 
 <td>
   <a href="https://bulbapedia.bulbagarden.net/wiki/Zekrom_(Pok%C3%A9mon)">
-    <img src="https://archives.bulbagarden.net/media/upload/8/81/644Zekrom.png">
+    <img src="/images/zekrom.png">
     <p> Zekrom </p>
   </a>
 </td>
 
 <td>
   <a href="https://bulbapedia.bulbagarden.net/wiki/Reuniclus_(Pok%C3%A9mon)">
-    <img src="https://archives.bulbagarden.net/media/upload/1/19/579Reuniclus.png">
+    <img src="/images/reuniclus.png">
     <p> Reuniclus </p>
   </a>
 </td>
@@ -33,21 +33,21 @@ Finally finished Pokémon White 😃
 <tr>
 <td>
   <a href="https://bulbapedia.bulbagarden.net/wiki/Zweilous_(Pok%C3%A9mon)">
-    <img src="https://archives.bulbagarden.net/media/upload/a/a6/634Zweilous.png">
+    <img src="/images/zweilous.png">
     <p> Zweilous </p>
   </a>
 </td>
 
 <td>
   <a href="https://bulbapedia.bulbagarden.net/wiki/Cobalion_(Pok%C3%A9mon)">
-    <img src="https://archives.bulbagarden.net/media/upload/6/65/638Cobalion.png">
+    <img src="/images/cobalion.png">
     <p> Cobalion </p>
   </a>
 </td>
 
 <td>
   <a href="https://bulbapedia.bulbagarden.net/wiki/Excadrill_(Pok%C3%A9mon)">
-    <img src="https://archives.bulbagarden.net/media/upload/6/63/530Excadrill.png">
+    <img src="/images/excadrill.png">
     <p> Excadrill </p>
   </a>
 </td>

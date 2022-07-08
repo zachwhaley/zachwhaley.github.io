@@ -55,4 +55,4 @@ Finally finished Pokémon White 😃
 
 </table>
 
-Next up Pokémon Crystal!
+Next → Pokémon Omega Ruby!

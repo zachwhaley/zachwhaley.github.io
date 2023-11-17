@@ -1,4 +1,4 @@
 Zach Whaley's Website
 ====================
 
-[zachwhaleys.website](http://zachwhaleys.website)
+[zachwhaley.github.io](http://zachwhaley.github.io)
